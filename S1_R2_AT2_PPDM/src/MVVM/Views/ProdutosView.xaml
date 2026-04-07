@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S1_R2_AT2_PPDM.Produtos"
+             Title="Produtos">
+    <CollectionView ItemsSource="{Binding Produtos}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame CornerRadius="15"
+                       Padding="20"
+                       HasShadow="True"
+                       Margin="10"
+                       Background="LightGray">
+                    
+                    <StackLayout 
+                        Padding="10"
+                        VerticalOptions="Fill"
+                        HorizontalOptions="Center">
+
+                        <Image 
+                            Source="{Binding Imagem}"
+                            Aspect="AspectFit"
+                            HeightRequest="150"
+                            WidthRequest="150"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+
+                        <StackLayout
+                            Padding="10"
+                            Spacing="10">
+                            <Label
+                                Text="{Binding Nome}"
+                                FontAttributes="Bold"
+                                FontSize="Medium"
+                                HorizontalTextAlignment="Center"/>
+                            <HorizontalStackLayout HorizontalOptions="Center">
+                                <Label Text="Preço: "
+                                       FontAttributes="Bold"/>
+                                
+                                <Label
+                                Text="{Binding Preco}"/>
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout
+                                HorizontalOptions="Center">
+                                <Label Text="Preço com PIX: "
+                                       FontAttributes="Bold"/>
+
+                                <Label
+                                Text="{Binding PrecoPix}"/>
+                            </HorizontalStackLayout>
+                            
+                            <HorizontalStackLayout
+                                HorizontalOptions="Center">
+                                <Label Text="Quantidade: "
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding Quantidade}"/>
+                            </HorizontalStackLayout>
+                            
+                            <HorizontalStackLayout
+                                HorizontalOptions="Center"
+                                Spacing="10">
+                                <Button Text="-"
+                                        HeightRequest="5"
+                                        WidthRequest="5"
+                                        Clicked="DiminuirQtd"
+                                        CommandParameter="{Binding .}"/>
+                                <Button Text="+"
+                                        HeightRequest="5"
+                                        WidthRequest="5"
+                                        Clicked="AdicionarQtd"
+                                        CommandParameter="{Binding .}"/>
+                            </HorizontalStackLayout>
+                            
+                            <VerticalStackLayout HorizontalOptions="Center">
+                                
+                                <Button 
+                                    Text="Adicionar ao carrinho"
+                                    Clicked="AdicionarCarrinho"
+                                    CommandParameter="{Binding .}"/>
+                            </VerticalStackLayout>
+                        </StackLayout>
+                        
+                        
+
+                    </StackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

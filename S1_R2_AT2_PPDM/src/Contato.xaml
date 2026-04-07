@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S1_R2_AT2_PPDM.src.Contato"
+             Title="Contato">
+
+    <FlexLayout Direction="Column" JustifyContent="SpaceAround" Padding="5" Margin="10">
+
+        <Frame Background="LightGrey" CornerRadius="10">
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="telefone.png" WidthRequest="30"/>
+                <Label
+                Text="(11) 4003-2026"
+                FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Background="LightGrey" CornerRadius="10">
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="whatsapp.png" WidthRequest="30"/>
+                <Label
+                Text="(11) 98765-4321"
+                FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Background="LightGrey" CornerRadius="10">
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="endereco.png" WidthRequest="30"/>
+                <Label 
+                Text="Av. Paulista, 1500, Conj. 101 – Bela Vista, São Paulo - SP, CEP 01310-200"
+                FontSize="Large"
+                HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Background="LightGrey" CornerRadius="10">
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="email.png" WidthRequest="30"/>
+                <Label 
+                Text="sac@stamina.com.br"
+                FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Background="LightGrey" CornerRadius="10">
+            <StackLayout HorizontalOptions="Center">
+                <HorizontalStackLayout>
+                <Label Text="CPNJ: " FontSize="Large" FontAttributes="Bold"/>
+                <Label 
+                Text="12.345.678/0001-90"
+                FontSize="Large"/>
+                    
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Frame>
+    </FlexLayout>
+</ContentPage>

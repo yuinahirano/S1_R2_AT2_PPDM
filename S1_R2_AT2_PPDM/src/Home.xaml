@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="S1_R2_AT2_PPDM.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="40"
+            Spacing="50">
+            <StackLayout
+                Padding="0">
+            <Image
+                Source="logoempresa.png"
+                HeightRequest="185"
+                Aspect="AspectFit"/>
+
+            <Label
+                Text="Alta tecnologia em vestuário e equipamentos para quem vive o esporte. Descubra coleções feitas para durar e superar seus limites."
+                FontSize="Medium"
+                HorizontalTextAlignment="Center"/>
+                
+            </StackLayout>
+
+            <StackLayout
+                Padding="10"
+                Spacing="20">
+                <Button 
+                    Text="Ver Produtos"
+                    Clicked="Button_Produtos"/>
+                <Button
+                    Text="Contato"
+                    Clicked="Button_Contatos"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
